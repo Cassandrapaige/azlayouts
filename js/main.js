@@ -13,59 +13,57 @@ const layout = document.querySelector('.layout');
 
 /* FONTS SECTION TEMPLATE */
 const renderFonts = (font, color) => {
-	const markup = ` 
+    const markup = ` 
         <h3 style="color:${color.secondary}">font-family:
         <br><span style="color:${color.complimentary}">${font.family}</span></h3>
         <h3 style="color:${color.secondary}">font-style:
         <br><span style="color:${color.complimentary}">${font.style}</span></h3>
         <h3 style="color:${color.secondary}">font-weight:
         <br><span style="color:${color.complimentary}">${font.weight}</span></h3>`;
-	fonts.innerHTML = markup;
+    fonts.innerHTML = markup;
 };
 
 /* COLORS SECTION TEMPLATE */
 const renderColors = (color) => {
-	const markup = ` 
+    const markup = ` 
         <h2>Colors</h2>
         <div class="color_item" style="background:${color.primary}" onClick="copyColor(this)">${color.primary}</div>
         <div class="color_item" style="background:${color.secondary}" onClick="copyColor(this)">${color.secondary}</div>
         <div class="color_item" style="background:${color.complimentary}" onClick="copyColor(this)">${color.complimentary}</div>
         <div class="color_item" style="background:${color.contrast}" onClick="copyColor(this)">${color.contrast}</div>`;
-	colors.innerHTML = markup;
+    colors.innerHTML = markup;
 };
 
 /* CODE SNIPPET SECTION TEMPLATE */
 const renderCss = (tip, color) => {
-	const markup = `
+  const markup = `
     <h4 class="selector" style="color:${color.secondary}">${tip.selector}{
-        <br> <span class='method' style="color:${color.primary}">${tip.method}</span>
-        }
+        <br> <span class='method' style="color:${color.primary}">${tip.method}</span>}
     </h4>
     <a href="${tip.src}" target="_blank"><button style="border: solid 2px ${color.contrast}; color:${color.contrast}">Example</button></a>
     <p style="background:${color.secondary}" class= 'exp'>${tip.exp}</p>
     `;
-	cssTip.innerHTML = markup;
+   cssTip.innerHTML = markup;
 };
 
 /* COPY COLOUR HEX CODE TO CLIPBOARD */
 const copyColor = (element) => {
-	var range, selection, worked;
-	if (document.body.createTextRange) {
-		range = document.body.createTextRange();
-		range.moveToElementText(element);
-		range.select();
-	}
-	else if (window.getSelection) {
-		selection = window.getSelection();
-		range = document.createRange();
-		range.selectNodeContents(element);
-		selection.removeAllRanges();
-		selection.addRange(range);
+   var range, selection, worked;
+     if (document.body.createTextRange) {
+	range = document.body.createTextRange();
+	range.moveToElementText(element);
+	range.select();
+      } else if (window.getSelection) {
+	selection = window.getSelection();
+	range = document.createRange();
+	range.selectNodeContents(element);
+	selection.removeAllRanges();
+	selection.addRange(range);
 	}
 	try {
-		document.execCommand('copy');
+	    document.execCommand('copy');
 	} catch (err) {
-		console.log(err);
+	    console.log(err);
 	}
 };
 
@@ -87,19 +85,19 @@ const pageLayout = () => {
 
 /* CHANGE LAYOUT DEPENDING ON KEYPRESS */
 const onKeypress = (event) => {
-	if (data[event.key]) {
-		home.style.display = 'none';
-		container.style.display = 'block';
-		pageLayout();
-		renderFonts(data[event.key].font, data[event.key].color);
-		renderColors(data[event.key].color);
-		renderCss(data[event.key].tip, data[event.key].color);
-	}
+    if (data[event.key]) {
+	home.style.display = 'none';
+	container.style.display = 'block';
+	pageLayout();
+	renderFonts(data[event.key].font, data[event.key].color);
+	renderColors(data[event.key].color);
+	renderCss(data[event.key].tip, data[event.key].color);
+     }
 };
 
 window.addEventListener('keypress', onKeypress);
 window.addEventListener('load', () => {
-	container.style.display = 'none';
+     container.style.display = 'none';
 });
 
 const data = {
