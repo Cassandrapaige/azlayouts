@@ -1,0 +1,303 @@
+  /* HOMEPAGE STYLES BEGINS */
+  .homepage .main__header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 50px;
+  }
+  
+  .homepage .main__header p {
+    font-size: 18px;
+  }
+
+  /* HOMEPAGE STYLES ENDS */
+  /* NAVIGATION STYLES BEGIN */
+
+  .nav {
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    z-index: 10;
+    padding: 20px 50px;
+    border-bottom: .5px solid black;
+    -webkit-box-shadow: 0 3px 4px -6px #000;
+    box-shadow: 0 3px 4px -6px #000;
+  }
+  
+  .nav #logo {
+    left: 10px;
+    top: -40px;
+    color: #333;
+    text-decoration: none;
+    font-size: 2.5em;
+    margin: 50px;
+    position: absolute;
+  }
+  
+  .nav__list {
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+  
+  .nav__list__item {
+    padding-left: 40px;
+    cursor: pointer;
+  }
+  
+  .nav__list__item:hover {
+    -webkit-animation: 1s moveUp ease;
+    animation: 1s moveUp ease;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    font-size: 1.8em;
+    color: #333;
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: titling-gothic-fb, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    cursor: default;
+  }
+  
+  /* NAVIGATION STYLES END */
+  /* HEADER STYLES BEGINS */
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .letter {
+    font-size: 20em;
+    margin-left: 50px;
+  }
+
+  /* HEADER STYLES ENDS */
+  /* COLORS SECTION STYLES BEGIN */
+
+  #colors {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+    margin: 50px;
+  }
+  
+  #colors h2 {
+    grid-column: 1/-1;
+    font-size: 3em;
+  }
+  
+  #colors .color_item {
+    position: relative;
+    cursor: copy;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 2em;
+    color: #fff;
+    height: 200px;
+  }
+  
+  #colors .color_item:hover::before {
+    content: 'click to copy to clipboard';
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    font-size: .3em;
+  }
+
+  /* COLORS SECTION STYLES ENDS */
+  /* FONTS SECTION STYLES BEGINS */
+  
+  #fonts {
+    min-height: 100vh;
+    margin-top: 100px;
+    padding: 100px 0px;
+  }
+  
+  #fonts h3 {
+    font-size: 3em;
+    padding: 50px;
+  }
+  
+  #fonts h3:nth-of-type(even) {
+    border-bottom: 3px solid #333;
+    border-top: 3px solid #333;
+  }
+  
+  #fonts span {
+    font-size: 1.3em;
+  }
+  
+  #fonts .select {
+    position: relative;
+    cursor: copy;
+  }
+  
+  #fonts .select:hover::before {
+    content: 'click to copy to clipboard';
+    position: absolute;
+    right: 0;
+    bottom: 80px;
+    font-size: 12px;
+    color: #fff;
+  }
+
+/* FONTS SECTION STYLES ENDS */
+/* CODE SNIPPET SECTION BEGINS*/
+
+  #cssTip {
+    min-height: 50vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 2em;
+    padding: 50px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  #cssTip .selector {
+    color: #6321A6;
+  }
+  
+  #cssTip .method {
+    color: #BF4588;
+  }
+  
+  #cssTip .exp {
+    font-size: .5em;
+    margin-top: 50px;
+    padding: 50px;
+    width: 100vw;
+    color: #fff;
+    font-family: titling-gothic-fb, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  #cssTip button {
+    border-radius: 50px;
+    padding: 15px 25px;
+    margin-top: 30px;
+    font-size: .5em;
+    background-color: transparent;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+  
+  #cssTip button:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  /* CODE SNIPPET SECTION ENDS */
+  /* MEDIA QUERIES */
+  @media screen and (max-width: 700px) {
+    .container {
+      margin: 0;
+    }
+  
+    .container header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      height: 50vh;
+      width: 100vw;
+    }
+  
+    .container .letter {
+      font-size: 8em;
+    }
+  
+    .container #colors {
+      margin: 0;
+      gap: 10px;
+    }
+  
+    .container #colors h2 {
+      margin: 50px 0px 20px 0px;
+      text-align: center;
+      padding: 0;
+    }
+  
+    .container #fonts {
+      margin-top: 20px;
+    }
+  
+    .container #fonts h3 {
+      font-size: 2em;
+    }
+  
+    .container .nav {
+      position: relative;
+      border-bottom: none;
+    }
+  
+    .container .nav #logo {
+      top: -50px;
+      left: -70px;
+      font-size: 2em;
+    }
+  
+    .container .nav__list {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding: 0px;
+      font-size: 1.2em;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      text-align: right;
+      position: relative;
+      margin-right: -30px;
+    }
+  
+    .container .nav__list__item {
+      padding: 0px;
+    }
+  }
